@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Biodata Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #fff);
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px  (0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #00796b;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-size: 18px;
+      color: #004d40;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .row {
+      display: flex;
+      gap: 20px;
+    }
+    .row .col {
+      flex: 1;
+    }
+    button {
+      background-color: #00796b;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Student Biodata Form</h2>
+
+    <form>
+      <div class="section">
+        <div class="section-title">Personal Information</div>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <div class="row">
+          <div class="col">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+          </div>
+          <div class="col">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+              <option value="">--Select--</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="photo">Upload Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+      </div>
+
+      <div class="section">
+        <div class="section-title">Contact Details</div>
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="phone">Mobile Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3"></textarea>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Academic Details</div>
+        <label for="course">Course/Program:</label>
+        <input type="text" id="course" name="course">
+
+        <label for="roll">Roll Number:</label>
+        <input type="text" id="roll" name="roll">
+      </div>
+
+      <button type="submit">Submit Biodata</button>
+    </form>
+  </div>
+</body>
+</html>
